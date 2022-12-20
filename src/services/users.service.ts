@@ -15,6 +15,9 @@ export default class UsersService {
   }
 
   public create = async (user: Users): Promise<Objreturn> => {
+    if (!user.level && user.level !== 0) {
+      return { type: 400, message: '"level" is required' };
+    }
     const verifyUser = validatedUser(user);
     if (verifyUser) return verifyUser;
     const createUser = await this.model.create(user);
