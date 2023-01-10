@@ -5,8 +5,6 @@ import connection from '../models/connection';
 import validatedUser from './validations/usersValidation';
 import { createToken } from '../auth/jwtFunctions';
 
-// const HTTP_NOT_FOUND_STATUS = 404;
-
 export default class UsersService {
   public model: UsersModel;
 

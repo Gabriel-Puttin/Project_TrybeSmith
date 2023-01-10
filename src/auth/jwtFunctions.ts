@@ -17,6 +17,6 @@ export const createToken = (data: JWT) => {
 };
 
 export const verifyToken = (token: string) => {
-  const data = jwt.verify(token, secret);
-  return data;
+  const decoded = jwt.verify(token, secret);
+  return decoded;
 };

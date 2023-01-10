@@ -1,5 +1,6 @@
-import { Pool, RowDataPacket } from 'mysql2/promise';
+import { Pool, RowDataPacket, ResultSetHeader } from 'mysql2/promise';
 import { Orders } from '../interfaces/orders.interface';
+import ProductsModel from './products.model';
 
 export default class OrdersModel {
   public connection: Pool;
@@ -17,5 +18,16 @@ export default class OrdersModel {
         GROUP BY A.id`,
     );
     return rows as Orders[];
+  };
+
+  public insertOrder = async (userId: number, productsIds: number[]): Promise<void> => {
+    const [{ insertId }] = await this.connection.execute<ResultSetHeader>(
+      'INSERT INTO Trybesmith.orders(user_id) VALUE (?);',
+      [userId],
+    );
+
+    const productModel = new ProductsModel(this.connection);
+    const result = productsIds.map((id) => productModel.updateProduct(id, insertId));
+    await Promise.all(result);
   };
 }

@@ -22,7 +22,7 @@ export default class LoginService {
     if (!user || (user.password !== userInfo.password)) {
       return { type: HTTP_UNAUTHORIZED_STATUS, message: 'Username or password invalid' };
     }
-    const { id, password, vocation, level, ...payload } = user;
+    const { password, vocation, level, ...payload } = user;
     const token = createToken(payload as JWT);
     return { type: null, message: token };
   };
