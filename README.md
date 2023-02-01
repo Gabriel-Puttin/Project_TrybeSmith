@@ -32,5 +32,27 @@ Para a execução deste propjeto é necessário ter o Docker e o Docker-Compose 
 
 ## Executando aplicação
 
-1. Clone o repositório
+1. Clone o repositório (caso esteja usando chave SSH)
+```
+git@github.com:Gabriel-Puttin/Project_TrybeSmith.git
+```
+2. Entre na pasta que você acabou de clonar
+```
+cd Project_TrybeSmith
+```
+3. Suba a aplicação com o docker-compose
+```
+docker-compose up -d
+```
+4. Acesse o terminal do container backend criado
+```
+docker exec -it trybesmith bash
+```
+5. Instale as depedências
+```
+npm install
+```
+6. Rode a aplicação
+```
+npm start
 ```
