@@ -48,7 +48,7 @@ docker-compose up -d
 ```
 docker exec -it trybesmith bash
 ```
-5. Instale as depedências
+5. Instale as dependências
 ```
 npm install
 ```
