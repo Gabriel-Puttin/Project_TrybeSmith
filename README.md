@@ -1,4 +1,4 @@
-# :construction: README customizado em construção ! :construction:
+# Boas vindas ao Projeto TrybeSmith !
 
 Aqui você vai encontrar os detalhes de como foi minha experiência durante o desenvolvimento deste projeto, stacks utilizadas e uma breve documentação sobre como utilizar este projeto em pleno funcionamento.
 
