@@ -34,7 +34,7 @@ Para a execução deste propjeto é necessário ter o Docker e o Docker-Compose 
 
 1. Clone o repositório (caso esteja usando chave SSH)
 ```
-git@github.com:Gabriel-Puttin/Project_TrybeSmith.git
+git clone git@github.com:Gabriel-Puttin/Project_TrybeSmith.git
 ```
 2. Entre na pasta que você acabou de clonar
 ```
